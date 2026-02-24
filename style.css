@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-
 body {
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -12,7 +11,261 @@ body {
   line-height: 1.6;
 }
 
-#showcase{
-  background-image:url('../images/unsplash yoga.jpg');
+#showcase {
+  background-image: url('../images/unsplash yoga.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 4rem 5rem 0;
+}
+
+/*#showcase h1,
+#showcase p{
+  color:#F4D35E;
+  -webkit-text-stroke: 2px #000;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  margin-bottom:.5rem;
+} */
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #F4D35E;
+  color: #181018;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: transform .3s ease;
+}
+
+.button:hover{
+  background: #E89A55;
+  transform: scale(1.05);
+}
+
+#features{
+  padding: 80px 0;
+  background: #181018;
+  color: #fff;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#features h2{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #F4D35E;
+  margin-bottom: 3rem;
+}
+
+.features-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature{
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature h3{
+  color: #F4D35E;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature p{
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px){
+  .container .features-grid{
+    grid-template-columns: 1fr;
+  }
+  .container .pricing-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+#pricing{
+  padding: 80px 0;
+  background: linear-gradient(135deg, #F4D35E 0%, #E89A55 100%);
+  color: #181018;
+}
+
+#pricing h2{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle{
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+  opacity: .9;
+}
+
+.pricing-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan{
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  position: relative;
+  transition: transform .3s ease;
+}
+
+.plan:hover{
+  transform: scale(1.05);
+}
+
+.popular-badge{
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2D1E2F;
+  color: white;
+  padding: .25rem 1rem;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.plan h3{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color:#2D1E2F
+}
+
+.price{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2A8CB7;
+  margin-bottom: 1.5rem;
+}
+
+.price span{
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.plan ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.plan li{
+  padding: .5rem 0;
+  border-bottom: 1px solid #BCD4DE;
+}
+
+.plan li:last-child{
+  border-bottom: none;
+}
+
+.plan-button{
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #2D1E2F;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.plan-button:hover {
+  background: #48304B;
+}
+
+#contact{
+  background: #181018;
+  color: #ffffff;
+  padding: 60px 0 20px;
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-brand h3{
+  color: #F4D35E;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.footer-brand p{
+  opacity: .8;
+  font-size: 1.1rem;
+}
+
+.footer-links h4,
+.footer-contact h4{
+  color: #F4D35E;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a{
+  color: #ffffff;
+  text-decoration: none;
+  opacity: .8;
+  transition: opacity .3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #F4D35E
+}
+
+.footer-contact p{
+  margin-bottom: .5rem;
+  opacity: .9;
+}
+
+.footer-bottom{
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+  text-align: center;
+  opacity: .7;
+}
+
+.footer-bottom a{
+  color: #F4D35E;
+  text-decoration: none;
 }
